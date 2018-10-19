@@ -1,0 +1,2 @@
+f95 -o prin_raiz.out prin_raiz.f95 f.f95 lecdat.f95 raiz.f95
+echo "Compilado y linkado correctamente"

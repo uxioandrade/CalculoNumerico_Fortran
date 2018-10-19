@@ -1,0 +1,5 @@
+2 !Valor del que se desea calcular la raíz
+1 !x0
+20 !xn
+0.0001 !eps
+0.0001 !dist
