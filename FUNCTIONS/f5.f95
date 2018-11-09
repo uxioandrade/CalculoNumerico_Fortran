@@ -1,9 +1,9 @@
-function f1(x) result(res)
+function f5(x) result(res)
 
     implicit none
     real(4), intent(in) :: x
     real(4) :: res
 
-    res = x*x - 65
+    res = exp(x) - 3*x*x
 
-end function f1
+end function f5

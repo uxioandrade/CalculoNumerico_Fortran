@@ -1,7 +1,7 @@
-subroutine lecdic(x0, eps, delta, a, b)
+subroutine lecdic(x0, eps, delta, a, b, alpha)
 
     implicit none
-    real(4) :: x0,eps,delta, a, b
+    real(4) :: x0,eps,delta, a, b, alpha 
 
     open(unit = 1, file = 'dicoto.dat', status = 'old',action = 'read')
 
@@ -24,6 +24,10 @@ subroutine lecdic(x0, eps, delta, a, b)
     write(*,*) "Introduza b"
     read(1,*) b
     write(*,*) b
+
+    write(*,*) "Introduza alpha"
+    read(1,*) alpha
+    write(*,*) alpha
 
     close(1, status = 'keep')
 

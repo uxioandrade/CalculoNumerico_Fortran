@@ -1,7 +1,7 @@
-subroutine dicoto(f3,x0, c, eps, delta, nitmax, a, b)
+subroutine dicoto(f3,x0, c, eps, delta, nitmax, a, b, alpha)
 
   real(4), external :: f3
-  real(4) :: x0, c, eps, delta, a, b, aux
+  real(4) :: x0, c, eps, delta, a, b, aux, alpha
   integer :: i, nitmax
 
   !Si f(a) > 0 y f(b) < 0, entonces cambiamos a y b
@@ -9,7 +9,6 @@ subroutine dicoto(f3,x0, c, eps, delta, nitmax, a, b)
   open(unit = 2, file = 'dicoto.sal', status = 'old',action = 'write')
 
   nitmax = ceiling((log(b-a) - log(eps))/log(2.0)-1)
-  write(*,*) nitmax
 
   !Si f(a) > 0 y f(b) < 0, entonces cambiamos a y b
   if(f3(a) > 0) then
@@ -27,7 +26,7 @@ subroutine dicoto(f3,x0, c, eps, delta, nitmax, a, b)
       write(*,*) "Construíronse",i,"elementos, sendo o último:",f3(c),"Test de parada: distancia ao límite"
         exit
     end if
-    if(ABS(c)<eps) then
+    if(ABS(c - alpha)<eps) then
           write(*,*) "Construíronse",i,"elementos, sendo o último",c,"Test de parada: distancia elementos consecutivos"
           exit
     end if
