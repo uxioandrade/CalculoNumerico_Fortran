@@ -17,11 +17,11 @@ subroutine dicoto(f3,x0, c, eps, delta, nitmax, a, b, alpha)
     b = aux
   end if
 
-  write(2,*) "          n     ", "   a     " , "         b       ", "       |F(c)|   ", "        |c - delta|  "
+  write(2,*) "          n     ", "   a     " , "         b       ", "         c       ", "       |F(c)|   ", "        |c - alpha|  "
 
   do i= 1,nitmax
     c = (a+b)/2
-    write(2,*) i, a, b, ABS(c), ABS(f3(c))
+    write(2,*) i, a, b, c, ABS(f3(c)), ABS(c-alpha)
     if(ABS(f3(c)) < delta) then
       write(*,*) "Construíronse",i,"elementos, sendo o último:",f3(c),"Test de parada: distancia ao límite"
         exit
