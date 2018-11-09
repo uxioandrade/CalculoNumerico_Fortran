@@ -1,0 +1,2 @@
+gfortran -o prin_dicoto.out prin_dicoto.f95 ../FUNCTIONS/f3.f95 lecdic.f95 dicoto.f95
+echo "Compilado y linkado correctamente"
