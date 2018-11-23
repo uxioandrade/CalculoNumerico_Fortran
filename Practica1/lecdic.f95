@@ -1,7 +1,7 @@
 subroutine lecdic(x0, eps, delta, a, b, alpha)
 
     implicit none
-    real(4) :: x0,eps,delta, a, b, alpha 
+    real(8) :: x0,eps,delta, a, b, alpha 
 
     open(unit = 1, file = 'dicoto.dat', status = 'old',action = 'read')
 
