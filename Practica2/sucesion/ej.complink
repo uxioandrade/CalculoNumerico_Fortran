@@ -1,0 +1,2 @@
+gfortran -o ejemplo7_2.out ej7.f95
+echo compilado y linkado

@@ -1,0 +1,2 @@
+gfortran -o prin_interpolacion.f95 ../FUNCTIONS/f.f95 entipl.f95 difcoc.f95 forlag.f95
+echo "Compilado y linkado correctamente">

@@ -1,9 +1,9 @@
 function f2(x) result(res)
 
     implicit none
-    real(4), intent(in) :: x
-    real(4) :: res
+    real(8), intent(in) :: x
+    real(8) :: res
 
-    res = exp(-x) - x
+    res = exp(-x)
 
 end function f2

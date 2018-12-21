@@ -1,0 +1,2 @@
+gfortran -o ej.out prin_iterfun.f95
+echo compilado y linkado

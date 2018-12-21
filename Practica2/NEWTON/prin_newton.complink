@@ -1,0 +1,2 @@
+gfortran -o prin_newton.out prin_newton.f95 ../../FUNCTIONS/fEx.f95 ../../FUNCTIONS/fexprima.f95 newton.f95 lecnewton.f95 schroder.f95
+echo "compilado y linkado realizado con éxito"

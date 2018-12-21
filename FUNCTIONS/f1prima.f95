@@ -1,9 +1,9 @@
-function f1(x) result(res)
+function f1prima(x) result(res)
 
     implicit none
     real(8), intent(in) :: x
     real(8) :: res
 
-    res = 65/x
+    res = 2*x
 
-end function f1
+end function f1prima
